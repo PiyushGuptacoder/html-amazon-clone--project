@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amazon clone</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+</head>
+<body>
+    <!-- <i class="fa-regular fa-heart"></i> -->
+    <script>
+    const images = ["banner1.jpg","banner2.jpg","banner3.jpg"];
+
+    let index = 0;
+
+    function changeBackground() {
+      document.banner.style.backgroundImage = `url(${images[index]})`;
+      index = (index + 1) % images.length;
+    }
+
+    // initial background
+    changeBackground();
+
+    // change every 5 seconds
+    setInterval(changeBackground, 5000);
+  </script>
+
+
+    <header>
+        <div class="navbar">
+            <div class="nav_logo border">
+                <div class="logo"> </div>
+            </div>
+            <div class="nav_address">
+                <div id="loc_logo"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="address_bar">
+                    <div id="font"><p>Deliver to</p></div>
+                    <div id="address">India</div>
+                </div>                
+            </div>
+            <div class="nav_searchbar">
+                <div class="options">
+                    <select class="selected">
+                        <option value="all">All</option>
+                        <option value="arts">Arts & Crafts</option>
+                        <option value="automotive">Automotive</option>
+                        <option value="baby">Baby</option>
+                        <option value="beauty">Beauty & Personal Care</option>
+                        <option value="books">Books</option>
+                        <option value="computers">Computers</option>
+                        <option value="digital_music">Digital Music</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="food_grocery">Food & Grocery</option>
+                        <option value="health_personal_care">Health & Personal Care</option>
+                        <option value="home_kitchen">Home & Kitchen</option>
+                        <option value="industrial_scientific">Industrial & Scientific</option>
+                        <option value="luggage">Luggage</option>
+                        <option value="movies_tv">Movies & TV</option>
+                        <option value="music_instruments">Musical Instruments</option>
+                        <option value="office_products">Office Products</option>
+                        <option value="patio_garden">Patio & Garden</option>
+                        <option value="pets">Pet Supplies</option>
+                        <option value="software">Software</option>
+                        <option value="sports_outdoors">Sports & Outdoors</option>
+                        <option value="tools_home_improvement">Tools & Home Improvement</option>
+                        <option value="toys_games">Toys & Games</option>
+                        <option value="video_games">Video Games</option>
+                    </select>
+                    
+                </div>
+                <div class="searchbox">
+                    <input placeholder="Search Amazon" id="input">
+                </div>
+                <div class="search_icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+            <div class="order_return_box">
+                <div class="return_font">Return</div>
+                <div class="order_font"> & Orders</div>
+            </div>
+
+            <div class="order_return_box">
+                <p class="return_font"><span>Hello,sign in</span></p>
+                <p class="order_font">Account & Lists</p>
+            </div>
+
+            <div class="cart_box">
+                <div class="cart_logo_value">
+                    <div class="cart_value">0</div>
+                    <div class="cart_logo"><i class="fa-solid fa-cart-arrow-down"></i></div>
+                </div>
+                <div class="cart_font">cart</div>
+            </div>
+           
+        </div>
+        <div class="panel">
+            <!-- <a href=""> </a> -->
+            <div class="panel_all">
+                <i class="fa-solid fa-bars"></i>
+                <div class="menu_text">All</div>
+            </div>
+            <div class="panel_ops">
+                <p>Today's Deals </p>
+                <p>Prime Video</p>
+                <p>Customer Service</p>
+                <p>Registry </p>
+                <p>Gift Cards</p>
+                <p>Sell</p>
+                
+            </div>
+            <div class="panel_deals">
+                Shop deals in Electronics 
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div class="banner">
+            <div class="hero_bar">
+                <p>You are on amazon.com.You can also shop on Amazon India for millions of product with fast local delivery.</p>
+                <a href="https://www.amazon.in/?ref=aisgw_intl_stripe_in" class="amazon_link">Click her to go to amazon.in</a>
+            </div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <div class="box_content" id="box1_content">
+                    <p class="content_name">Revemp your home in style</p>
+                    <div class="box_image_content" id="box1_image_content">
+                        <div class="product" id="box1_1">
+                            <img src="box1.jpg" alt="cloths" class="image" id="img1_1">
+                            <p class="product_names">Cusion covers & bedsheets</p>
+                        </div>
+                        <div class="product" id="box1_2">
+                            <img src="box2.jpg" alt="electronics" class="image" id="img1_2">
+                            <p class="product_names">Figurines and vases &more</p>
+                        </div>
+                        <div class="product" id="box1_3">
+                            <img src="box3.jpg" alt="home_appliances" class="image" id="img1_3">
+                            <p class="product_names">Home storage</p>
+                        </div>
+                        <div class="product" id="box1_4">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_lighting_2._SY116_CB555624324_.jpg" alt="books" class="image" id="img1_4">
+                            <p class="product_names">Lighting solution</p>
+                        </div> 
+                    </div>
+                    <div class="see_more_deals_box">
+                        <a href="https://www.amazon.in/events/deals/?_encoding=UTF8&_encoding=UTF8&ref_=dealz_cs_see_more&dynamicBubble=%7B%2522collectionId%2522%3A%2522deals-contextual-link%2522%2C%2522departmentsIncluded%2522%3A%5B1380492031%2C3403860031%5D%7D&pd_rd_w=3vJ6F&content-id=amzn1.sym.0626f74d-a519-415e-bd06-6af244e79e81&pf_rd_p=0626f74d-a519-415e-bd06-6af244e79e81&pf_rd_r=J4SXJ1Q10SB2ZBW8HSEX&pd_rd_wg=v91nG&pd_rd_r=19e6c27e-d272-4048-8088-fb86d853e99b&bubble-id=deals-contextual-link" class="see_more_deals">See more deals</a>
+                    </div>
+                </div>
+                <div class="box_content" id="box2_content">
+                    <p class="content_name">Bulk order discounts+Up to 18%GST savings</p>
+                    <div class="box_image_content" id="box2_image_content">
+                        <div class="product" id="box2_1">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonBusiness/img25/nov/bau/ain/gw/Laptops_186_116_10._SY116_CB777673831_.jpg" alt="cloths" class="image" id="img2_1">
+                            <p class="product_names">Up to 45%off |Laptops</p>
+                        </div>
+                        <div class="product" id="box2_2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonBusiness/img25/nov/bau/ain/gw/KitchenAppliances_186_116_10._SY116_CB777673831_.jpg" alt="electronics" class="image" id="img2_2">
+                            <p class="product_names">Up to 65%off|Kitchen Appliances</p>
+                        </div>
+                        <div class="product" id="box2_3">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonBusiness/img25/nov/bau/ain/gw/OfficeChairs_186_116_10._SY116_CB777673831_.jpg" alt="home_appliances" class="image" id="img2_3">
+                            <p class="product_names">Up to 55%off|Office Chairs</p>
+                        </div>
+                        <div class="product" id="box2_4">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonBusiness/img25/dec/bau/ain/gw/ABdelivery_186_116._SY116_CB776314701_.jpg" alt="books" class="image" id="img2_4">
+                            <p class="product_names">Up to 60%off|Business purchases</p>
+                        </div>
+                    </div>
+                    <div class="see_more_deals_box">
+                        <a href="https://www.amazon.in/b/ref=vpr_b2c_pqc_reg/?_encoding=UTF8&ie=UTF8&node=80662860031&pd_rd_w=dM0Gt&content-id=amzn1.sym.cf5632b9-cf46-4edc-8eb8-62d7de4b16d8&pf_rd_p=cf5632b9-cf46-4edc-8eb8-62d7de4b16d8&pf_rd_r=1PNVEX6JN7B9KJN8N75C&pd_rd_wg=XspKu&pd_rd_r=a14f1f9a-6ba0-49ce-93be-eef633401191&ref_=pd_hp_d_atf_unk" class="see_more_deals">Create a free account</a>
+                    </div>
+                </div>
+                <div class="box_content" id="box3_content">
+                    <p class="content_name">Appliances for your home|Upto 55%off</p>
+                    <div class="box_image_content" id="box3_image_content">
+                        <div class="product" id="box3_1">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg" alt="cloths" class="image" id="img3_1">
+                            <p class="product_names">Air conditioners</p>
+                        </div>
+                        <div class="product" id="box3_2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg" alt="electronics" class="image" id="img3_2">
+                            <p class="product_names">Refrigerators</p>
+                        </div>
+                        <div class="product" id="box3_3">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg" alt="home_appliances" class="image" id="img3_3">
+                            <p class="product_names">Microwaves</p>
+                        </div>
+                        <div class="product" id="box3_4">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg" alt="books" class="image" id="img3_4">
+                            <p class="product_names">Washing Machines</p>
+                        </div>
+                    </div>
+                    <div class="see_more_deals_box">
+                    <a href="https://www.amazon.in/s?bbn=84514735031&rh=n%3A84514735031%2Cp_85%3A10440599031&_encoding=UTF8&content-id=amzn1.sym.58c90a12-100b-4a2f-8e15-7c06f1abe2be&pd_rd_r=39b36e64-9642-4a55-b1b1-44b936af761f&pd_rd_w=Mr1ub&pd_rd_wg=YMK5L&pf_rd_p=58c90a12-100b-4a2f-8e15-7c06f1abe2be&pf_rd_r=CJGJHMP97NXNEZZGFP5S&ref=pd_hp_d_atf_unk" class="see_more_deals">See more</a>
+                    </div>
+                </div>
+                <div class="box_content" id="box4_content">
+                    <p class="content_name">Starting at just $149 Headphones</p>
+                    <div class="box_image_content" id="box4_image_content">
+                        <div class="product" id="box4_1">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_boAt_0.5x._SY116_CB553870684_.jpg" alt="cloths" class="image" id="img4_1">
+                            <p class="product_names">Starting at Rs249</p>
+                        </div>
+                        <div class="product" id="box4_2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_Boult_0.5x._SY116_CB553870684_.jpg" alt="electronics" class="image" id="img4_2">
+                            <p class="product_names">Staring Rs349 |Boult</p>
+                        </div>
+                        <div class="product" id="box4_3">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_Noise_0.5x._SY116_CB553870684_.jpg" alt="home_appliances" class="image" id="img4_3">
+                            <p class="product_names">Starting Rs499 |Noise</p>
+                        </div>
+                        <div class="product" id="box4_4">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/MSO/PD3/PC_QuadCard_Zeb_0.5x_1._SY116_CB570220221_.jpg" alt="books" class="image" id="img4_4">
+                            <p class="product_names">Starting Rs599 |Zebronics</p>
+                        </div>
+                    </div>  
+                    <div class="see_more_deals_box">
+                    <a href="https://www.amazon.in/b/?_encoding=UTF8&ie=UTF8&node=1388921031&pd_rd_w=zlHNX&content-id=amzn1.sym.82b20790-8877-4d70-8f73-9d8246e460aa&pf_rd_p=82b20790-8877-4d70-8f73-9d8246e460aa&pf_rd_r=CJGJHMP97NXNEZZGFP5S&pd_rd_wg=YMK5L&pd_rd_r=39b36e64-9642-4a55-b1b1-44b936af761f&ref_=pd_hp_d_atf_unk" class="see_more_deals">See all offers</a>
+                    </div>          
+                </div>
+            </div>
+
+
+
+            <div class="container">
+                <div class="box_content" id="box1_content">
+                    <p class="content_name">Revemp your home in style</p>
+                    <div class="box_image_content" id="box1_image_content">
+                        <div class="product" id="box1_1">
+                            <img src="box1.jpg" alt="cloths" class="image" id="img1_1">
+                            <p class="product_names">Cusion covers & bedsheets</p>
+                        </div>
+                        <div class="product" id="box1_2">
+                            <img src="box2.jpg" alt="electronics" class="image" id="img1_2">
+                            <p class="product_names">Figurines and vases &more</p>
+                        </div>
+                        <div class="product" id="box1_3">
+                            <img src="box3.jpg" alt="home_appliances" class="image" id="img1_3">
+                            <p class="product_names">Home storage</p>
+                        </div>
+                        <div class="product" id="box1_4">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_lighting_2._SY116_CB555624324_.jpg" alt="books" class="image" id="img1_4">
+                            <p class="product_names">Lighting solution</p>
+                        </div> 
+                    </div>
+                    <div class="see_more_deals_box">
+                        <a href="https://www.amazon.in/events/deals/?_encoding=UTF8&_encoding=UTF8&ref_=dealz_cs_see_more&dynamicBubble=%7B%2522collectionId%2522%3A%2522deals-contextual-link%2522%2C%2522departmentsIncluded%2522%3A%5B1380492031%2C3403860031%5D%7D&pd_rd_w=3vJ6F&content-id=amzn1.sym.0626f74d-a519-415e-bd06-6af244e79e81&pf_rd_p=0626f74d-a519-415e-bd06-6af244e79e81&pf_rd_r=J4SXJ1Q10SB2ZBW8HSEX&pd_rd_wg=v91nG&pd_rd_r=19e6c27e-d272-4048-8088-fb86d853e99b&bubble-id=deals-contextual-link" class="see_more_deals">See more deals</a>
+                    </div>
+                </div>
+                <div class="box_content" id="box2_content">
+                    <p class="content_name">Better health ,better you |Trending now</p>
+                    <div class="box_image_content" id="box2_image_content">
+                        <div class="product" id="box2_1">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/2025/Cons/HPC/Janart2026/Ay/PC_QC_186x116_04._SY116_CB773336816_.jpg" alt="cloths" class="image" id="img2_1">
+                            <p class="product_names">Protein powder</p>
+                        </div>
+                        <div class="product" id="box2_2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/2025/Cons/HPC/Janart2026/Ay/PC_QC_186x116_03._SY116_CB773336816_.jpgg" alt="electronics" class="image" id="img2_2">
+                            <p class="product_names">Morina powder</p>
+                        </div>
+                        <div class="product" id="box2_3">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/2025/Cons/HPC/Janart2026/Ay/PC_QC_186x116_02._SY116_CB773336816_.jpg" alt="home_appliances" class="image" id="img2_3">
+                            <p class="product_names">Immunity booster</p>
+                        </div>
+                        <div class="product" id="box2_4">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/2025/Cons/HPC/Janart2026/Ay/PC_QC_186x116_01._SY116_CB773336816_.jpg" alt="books" class="image" id="img2_4">
+                            <p class="product_names">Diabetics & sugar control</p>
+                        </div>
+                    </div>
+                    <div class="see_more_deals_box">
+                        <a href="https://www.amazon.in/b/ref=vpr_b2c_pqc_reg/?_encoding=UTF8&ie=UTF8&node=80662860031&pd_rd_w=dM0Gt&content-id=amzn1.sym.cf5632b9-cf46-4edc-8eb8-62d7de4b16d8&pf_rd_p=cf5632b9-cf46-4edc-8eb8-62d7de4b16d8&pf_rd_r=1PNVEX6JN7B9KJN8N75C&pd_rd_wg=XspKu&pd_rd_r=a14f1f9a-6ba0-49ce-93be-eef633401191&ref_=pd_hp_d_atf_unk" class="see_more_deals">Create a free account</a>
+                    </div>
+                </div>
+                <div class="box_content" id="box3_content">
+                    <p class="content_name">Bigger screen,Smarter Choice </p>
+                    <div class="box_image_content" id="box3_image_content">
+                        <div class="product" id="box3_1">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/TVsmovie2/B0G44MLJDB_TCL_55_PC_QC_186x116._SY116_CB773513560_.jpg" alt="cloths" class="image" id="img3_1">
+                            <p class="product_names">TCL 139cm (55)4k QLED TV</p>
+                        </div>
+                        <div class="product" id="box3_2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/TVsmovie2/B0F43DQN7H_Samsung_55_PC_QC_186x116._SY116_CB773513560_.jpg" alt="electronics" class="image" id="img3_2">
+                            <p class="product_names">Samsung 138cm (55)Vista pro OLED TV</p>
+                        </div>
+                        <div class="product" id="box3_3">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/TVsmovie2/B0D3DW1CJF_Sony_55_PC_QC_186x116._SY116_CB773513560_.jpg" alt="home_appliances" class="image" id="img3_3">
+                            <p class="product_names">Sony Bravia 3 139cm(55) 4kGoogle TV</p>
+                        </div>
+                        <div class="product" id="box3_4">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/TVsmovie2/B0D3XD9M5D_Toshiba_43_PC_QC_186x116_2._SY116_CB773496446_.jpg" alt="books" class="image" id="img3_4">
+                            <p class="product_names">TOSHIBA 108cm (43) 4K Smart QLED TV</p>
+                        </div>
+                    </div>
+                    <div class="see_more_deals_box">
+                    <a href="https://www.amazon.in/s?bbn=84514735031&rh=n%3A84514735031%2Cp_85%3A10440599031&_encoding=UTF8&content-id=amzn1.sym.58c90a12-100b-4a2f-8e15-7c06f1abe2be&pd_rd_r=39b36e64-9642-4a55-b1b1-44b936af761f&pd_rd_w=Mr1ub&pd_rd_wg=YMK5L&pf_rd_p=58c90a12-100b-4a2f-8e15-7c06f1abe2be&pf_rd_r=CJGJHMP97NXNEZZGFP5S&ref=pd_hp_d_atf_unk" class="see_more_deals">See more</a>
+                    </div>
+                </div>
+                <div class="box_content" id="box4_content">
+                    <p class="content_name">Starting at just $149 Headphones</p>
+                    <div class="box_image_content" id="box4_image_content">
+                        <div class="product" id="box4_1">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_boAt_0.5x._SY116_CB553870684_.jpg" alt="cloths" class="image" id="img4_1">
+                            <p class="product_names">Starting at Rs249</p>
+                        </div>
+                        <div class="product" id="box4_2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_Boult_0.5x._SY116_CB553870684_.jpg" alt="electronics" class="image" id="img4_2">
+                            <p class="product_names">Staring Rs349 |Boult</p>
+                        </div>
+                        <div class="product" id="box4_3">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_Noise_0.5x._SY116_CB553870684_.jpg" alt="home_appliances" class="image" id="img4_3">
+                            <p class="product_names">Starting Rs499 |Noise</p>
+                        </div>
+                        <div class="product" id="box4_4">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/MSO/PD3/PC_QuadCard_Zeb_0.5x_1._SY116_CB570220221_.jpg" alt="books" class="image" id="img4_4">
+                            <p class="product_names">Starting Rs599 |Zebronics</p>
+                        </div>
+                    </div>  
+                    <div class="see_more_deals_box">
+                    <a href="https://www.amazon.in/b/?_encoding=UTF8&ie=UTF8&node=1388921031&pd_rd_w=zlHNX&content-id=amzn1.sym.82b20790-8877-4d70-8f73-9d8246e460aa&pf_rd_p=82b20790-8877-4d70-8f73-9d8246e460aa&pf_rd_r=CJGJHMP97NXNEZZGFP5S&pd_rd_wg=YMK5L&pd_rd_r=39b36e64-9642-4a55-b1b1-44b936af761f&ref_=pd_hp_d_atf_unk" class="see_more_deals">See all offers</a>
+                    </div>          
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
